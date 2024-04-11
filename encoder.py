@@ -5,7 +5,11 @@ def encoder(password):
     return encoded
 
 def decoder(password):
-    decoded = ""
+    result = ""
     for i in password:
-        decoded += decoded + str(int(i) - 3)
-    return decoded
+        result = result + str(int(i) - 3)
+    return result
+
+password = "12345"
+print(encoder(password))
+print(decoder(password))
